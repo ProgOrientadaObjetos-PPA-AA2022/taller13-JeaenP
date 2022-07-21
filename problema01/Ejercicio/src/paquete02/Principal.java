@@ -7,6 +7,7 @@ package paquete02;
 
 import java.util.ArrayList;
 import paquete01.Televisor;
+import paquete03.MetodosTelevisor;
 
 /**
  *
@@ -32,9 +33,18 @@ public class Principal {
         tvs.add(t1);
         tvs.add(t2);
         tvs.add(t3);
+        
+        MetodosTelevisor mt = new MetodosTelevisor();
+        mt.establecerT(tvs);
+        mt.calcularMarcasMasVendidas();
+        mt.calcularTelevisorMasCaro();
+        mt.calcularTotalPrecio();
+        
+       
         System.out.println("-----------------");
-        System.out.printf("%.2f\n", t1.totalPrecioTvs(tvs));
-        System.out.printf("%s\n", t1.listaMarcasVendidas(tvs));
+        System.out.printf("%.2f\n", mt.obtenerTotalPrecio());
+        System.out.printf("%s\n", mt.obtenerMarcasMasVendidas());
+        System.out.printf("%.2f\n", mt.obtenerTelevisorMasCaro());
 
     }
 }

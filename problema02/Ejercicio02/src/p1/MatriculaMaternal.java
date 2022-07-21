@@ -5,12 +5,14 @@
  */
 package p1;
 
+import p2.Matricula;
+
 /**
  *
  * @author reroes
  */
-public class MatriculaMaternal {
-    private double tarifa;
+public class MatriculaMaternal extends Matricula{
+    
     
         
     public void establecerTarifa(){
@@ -20,5 +22,12 @@ public class MatriculaMaternal {
         
     public double obtenerTarifa(){
         return tarifa;
+    }
+    
+    public String toString() {
+        String cadena = String.format("Matricula Maternal\n"
+                + "Tarifa: %.2f", tarifa);
+        
+        return cadena;
     }
 }

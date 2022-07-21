@@ -5,13 +5,15 @@
  */
 package p1;
 
+import p2.Matricula;
+
 /**
  *
  * @author reroes
  */
-public class MatriculaJardin {
-    private double tarifa;
-    
+public class MatriculaJardin extends Matricula{
+
+  
         
     public void establecerTarifa(){
         // tarifa = costo desayunos + costo libros + costo paseos
@@ -20,5 +22,12 @@ public class MatriculaJardin {
         
     public double obtenerTarifa(){
         return tarifa;
+    }
+    
+    public String toString() {
+        String cadena = String.format("Matricula Jardin\n"
+                + "Tarifa: %.2f", tarifa);
+        
+        return cadena;
     }
 }
