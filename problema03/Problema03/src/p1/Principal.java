@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import p2.Estudiante;
 import p3.Correo;
 import p3.DominioGmail;
+import p3.DominioGobiernoEcGob;
+import p3.DominioOutlook;
+import p3.DominioUtplEduEc;
+import p3.DominioYahoo;
 
 /**
  *
@@ -40,7 +44,40 @@ public class Principal {
         c.establecerUserName(e.obtenerUserName());
         c.establecerCorreo();
         
+        DominioOutlook dominio2 = new DominioOutlook();
+        dominio2.establecerDominio("hotmail.com");
+        Correo c2 = new Correo();
+        c2.establecerDominio(dominio2);
+        c2.establecerUserName(e.obtenerUserName());
+        c2.establecerCorreo();
+        
+        DominioYahoo dominio3 = new DominioYahoo();
+        dominio3.establecerDominio("yahoo.com");
+        Correo c3 = new Correo();
+        c3.establecerDominio(dominio3);
+        c3.establecerUserName(e.obtenerUserName());
+        c3.establecerCorreo();
+        
+        DominioUtplEduEc dominio4 = new DominioUtplEduEc();
+        dominio4.establecerDominio("yahoo.com");
+        Correo c4 = new Correo();
+        c4.establecerDominio(dominio4);
+        c4.establecerUserName(e.obtenerUserName());
+        c4.establecerCorreo();
+        
+        DominioGobiernoEcGob dominio5 = new DominioGobiernoEcGob();
+        dominio5.establecerDominio("yahoo.com");
+        Correo c5 = new Correo();
+        c5.establecerDominio(dominio5);
+        c5.establecerUserName(e.obtenerUserName());
+        c5.establecerCorreo();
+        
         lista.add(c);
+        lista.add(c2);
+        lista.add(c3);
+        lista.add(c4);
+        lista.add(c5);
+
         
         e.establecerCorreos(lista);
         
