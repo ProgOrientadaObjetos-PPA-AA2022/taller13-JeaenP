@@ -77,11 +77,11 @@ public class Principal {
         lista.add(c3);
         lista.add(c4);
         lista.add(c5);
-
+        
         
         e.establecerCorreos(lista);
         
-        System.out.printf("%s\n", e);
+        System.out.println(e);
         
         
     }
